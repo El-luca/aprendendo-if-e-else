@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>país</title>
+</head>
+<body>
+    <h1>Qual é o seu país de origem ????</h1>
+    O meu país de origem é : <input type="text" name="país" id="país">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="result">
+
+    </div>
+    <style>
+        #país{
+            text-transform: capitalize;
+        }
+    </style>
+
+    <script>
+        function calcular(){
+            const textCountry = document.querySelector('input#país')
+            const result = document.querySelector('div#result')
+            const country = (textCountry.value)
+            result.textContent = `Seu país de origem é ${country}`           
+            if ( country == 'Brasil' | country =='brasil'){
+                result.innerHTML += `<p>Morando em ${country} você é <strong>Brasileiro</strong></p>`                
+            } else  {
+                result.innerHTML += `<p>Morando em ${country} você é <strong>Estrangeiro</strong></p>`                
+            }
+        }
+
+    </script>
+</body>
+</html>
